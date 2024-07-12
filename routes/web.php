@@ -6,10 +6,6 @@ Route::get('/', function(){
     return view('welcome');
 });
 
-Route::get('/empresa', function(){
-    return view('site/empresa');
-});
-
 Route::any('/any', function(){
     return "permite todo tipo de acesso hppt (put, delete, delete, post)";
 });
@@ -22,6 +18,17 @@ Route::get('/produto/{id}/{cat?}', function($id, $cat = ''){
     return "O id do produto é:".$id."<br>"."A categoria é:".$cat;
 });
 
-Route::get('/patient/{id}', function($id = ''){
-    return "O id do produto é:".$id;
+Route::get('/produt/{id}/{cat}', function($id, $cat){
+    return "O id do produto é:".$id."<br>"."A categoria é:".$cat;
+});
+
+Route::redirect('/sobre', '/empresa');
+Route::view('/empresa', 'site/empresa');
+
+Route::get('/news', function(){
+    return view('news');
+})->name('noticias');
+
+Route::get('/novidades', function(){
+    return redirect()->route('noticias');
 });
