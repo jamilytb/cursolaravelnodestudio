@@ -15,7 +15,7 @@ public function up(): void
         $table->text('descricao');
         $table->double('preco', 10, 2);
         $table->string('slug');
-        $table->string('imagem');
+        $table->string('imagem')->nullable();
 
         $table->unsignedBigInteger('id_user');
         $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
