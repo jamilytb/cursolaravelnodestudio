@@ -18,7 +18,7 @@ class ProdutoController extends Controller
         $idade = 28;
         $html = "<h1> Olá </h1>";
 
-        return view('site.empresa', compact('nome', 'idade', 'html'));
+        return view('site.home', compact('nome', 'idade', 'html'));
     }
 
     /**
@@ -42,7 +42,7 @@ class ProdutoController extends Controller
      */
     public function show(string $id)
     {
-        //
+    
     }
 
     /**

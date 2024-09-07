@@ -1,0 +1,1 @@
+Erro 500 personalizado! Erro não tratado generico. Esse é o pior. O servidor encontrou uma situação que não sabe lidar. Erro de servidor.
