@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\SiteController;
 
 Route::resource('produtos', ProdutoController::class);
 
-//Route::get('users/{id}', [UserController::class, 'index'])->name('user.index');
+Route::get('/', [SiteController::class, 'index'])->name('sit.index');
+
+Route::get('/produto/{slug}', [SiteController::class, 'details'])->name('site.details');

@@ -6,18 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Produto;
 class ProdutoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-       $produtos = Produto::all();
+       $produtos = Produto::paginate(3);
+
         return view('site.home', compact('produtos'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
         //
