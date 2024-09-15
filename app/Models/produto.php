@@ -12,5 +12,11 @@ class produto extends Model
     //Nome da tabela
     protected $table = 'produtos';
 
-}
+    public function user() {
+        return $this->belongsTo(User::class, 'id_user');
+    }
 
+    public function categoria() {
+        return $this->belongsTo(Categoria::class, 'id_categoria');
+    }
+}
