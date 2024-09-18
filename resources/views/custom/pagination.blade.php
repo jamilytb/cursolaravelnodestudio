@@ -3,7 +3,8 @@
         @if ($paginator->onFirstPage())
             <li class="disabled"><i class="material-icons">chevron_left</i></li>
         @else
-            <li class="waves-effect"><a href="{{ $paginator->previousPageUrl() }}"><i class="material-icons">chevron_left</i></a></li>
+            <li class="waves-effect"><a href="{{ $paginator->previousPageUrl() }}"><i
+                        class="material-icons">chevron_left</i></a></li>
         @endif
 
         @foreach ($elements as $element)
@@ -17,16 +18,19 @@
                             <a>{{ $page }}</a>
                         </li>
                     @else
-                        <li class="waves-effect"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
+                        <li class="waves-effect"><a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                        </li>
                     @endif
                 @endforeach
             @endif
         @endforeach
 
         @if ($paginator->hasMorePages())
-            <li class="waves-effect"><a href="{{ $paginator->nextPageUrl() }}"><i class="material-icons">chevron_right</i></a></li>
+            <li class="waves-effect"><a href="{{ $paginator->nextPageUrl() }}"><i
+                        class="material-icons">chevron_right</i></a></li>
         @else
-            <li class="disabled"><a href="{{ $paginator->nextPageUrl() }}"><i class="material-icons">chevron_right</i></a></li>
+            <li class="disabled"><a href="{{ $paginator->nextPageUrl() }}"><i
+                        class="material-icons">chevron_right</i></a></li>
         @endif
     </ul>
 @endif
